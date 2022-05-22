@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADNSU Lab3 || JS Homework</title>
+
+    <script language="Javascript">
+      function fun() {
+        var a, b, y, x, w;
+        a = Number(document.forma.a.value);
+        b = Number(document.forma.b.value);
+        x = Number(document.forma.x.value);
+        y = b * Math.pow(Math.tan(x), 2) - a / Math.pow(Math.sin(x / a), 2);
+        w = Math.sin(Math.sqrt(4 * Math.pow(y, 3) + x) / (Math.pow(y, 2) - 1));
+        document.forma.y.value = y;
+        document.forma.w.value = w;
+      }
+    </script>
+  </head>
+  <body>
+    <form name="forma">
+      Enter a <input type="text" name="a" size="10" /> <br />
+      <br />
+      Entere b <input type="text" name="b" size="10" /> <br />
+      <br />
+      Enter x <input type="text" name="x" size="10" /> <br />
+      <br />
+      <br />
+
+      <h3>Result</h3>
+
+      y <input type="text" name="y" size="20" /> <br />
+      <br />
+      w <input type="text" name="w" size="20" /> <br />
+      <br />
+
+      <input type="button" value="Calcualte" onclick="fun()" /> <br />
+    </form>
+  </body>
+</html>
